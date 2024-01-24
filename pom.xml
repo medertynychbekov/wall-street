@@ -12,10 +12,17 @@
     <artifactId>wall-street</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>wall-street</name>
+    <packaging>pom</packaging>
     <description>wall-street</description>
     <properties>
         <java.version>17</java.version>
     </properties>
+    <modules>
+        <module>analytics-service</module>
+        <module>auth-service</module>
+        <module>profile-service</module>
+        <module>transaction-service</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

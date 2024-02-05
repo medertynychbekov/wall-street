@@ -14,7 +14,6 @@ import lombok.Setter;
 @Setter
 public class DailyDataEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String open;
 
@@ -27,4 +26,7 @@ public class DailyDataEntity {
     private String volume;
 
     private String date;
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.MERGE, CascadeType.REFRESH})
+    @JoinColumn(name = "metaData_id")
+    private MetaDataEntity metaDataEntity;
 }
